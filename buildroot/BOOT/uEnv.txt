@@ -1,0 +1,4 @@
+loadfromsd=load mmc 0:1 0x82000000 uImage; load mmc 0:1 0x88000000 osd335x-tfg-board-01.dtb
+linuxbootargs=setenv bootargs console=ttyO0,115200 root=/dev/mmcblk0p2 rw
+uenvcmd=run loadfromsd; run linuxbootargs; bootm 0x82000000 - 0x88000000
+
